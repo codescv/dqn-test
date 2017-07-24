@@ -89,7 +89,7 @@ def set_global_seeds(i):
     except ImportError:
         pass
     else:
-        tf.set_random_seed(i) 
+        tf.set_random_seed(i)
     np.random.seed(i)
     random.seed(i)
 
@@ -122,6 +122,7 @@ def main():
 
     # Change the index to select a different game.
     task = benchmark.tasks[3]
+    print('task: ', task.env_id, 'max steps: ', task.max_timesteps)
 
     # Run training
     seed = 0 # Use a seed of zero (you may want to randomize the seed!)
